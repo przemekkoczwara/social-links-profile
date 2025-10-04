@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: var(--fs-16);
+}
+a {
+  list-style: none;
+  color: inherit;
+}
+
+:root {
+    
+  /* Colors  */
+
+  --bg-green: hsl(75, 94%, 57%);
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-grey-700: hsl(0, 0%, 20%);
+  --bg-grey-800: hsl(0, 0%, 12%);
+  --bg-grey-900: hsl(0, 0%, 8%);
+
+  /* font sizes */
+  --fs-40: 40px;
+  --fs-24: 24px;
+  --fs-16: 16px;
+  --fs-14: 14px;
+  --fs-12: 12px;
+  --fs-8: 8px;
+  --fs-4: 4px;
+
+  /* font weights */
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* line hight */
+
+  --lh: 150%;
+}
+
+/* Typograpy  Weights: 400, 600, 700*/
+
+.text-24-bold {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-600);
+}
+.text-14-bold {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+}
+
+.text-14-regular {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  line-height: var(--lh);
+  background: var(--bg-grey-900);
+  color: var(--bg-white);
+}
