@@ -6,15 +6,17 @@
   box-sizing: border-box;
 }
 html {
-  font-size: var(--fs-16);
+  font-size: var(--fs-16); /* 16px = 1rem*/
+}
+li {
+  list-style-type: none;
 }
 a {
-  list-style: none;
+  text-decoration: none;
   color: inherit;
 }
 
 :root {
-    
   /* Colors  */
 
   --bg-green: hsl(75, 94%, 57%);
@@ -23,46 +25,93 @@ a {
   --bg-grey-800: hsl(0, 0%, 12%);
   --bg-grey-900: hsl(0, 0%, 8%);
 
-  /* font sizes */
-  --fs-40: 40px;
-  --fs-24: 24px;
-  --fs-16: 16px;
-  --fs-14: 14px;
-  --fs-12: 12px;
-  --fs-8: 8px;
-  --fs-4: 4px;
+  /* font sizes & font space */
+
+  --fsize-24: 1.5rem; /* 24px */
+  --fszie-16: 1rem; /* 16px */
+  --fsize-14: 0.875rem; /* 14px */
+
+  --fspace-40: 2.5rem; /* 40px */
+  --fspace-24: 1.5rem; /* 24px */
+  --fspace-16: 1rem; /* 16px */
+  --fspace-12: 0.75rem; /* 12px */
+  --fspace-8: 0.5rem; /* 8px */
+  --fspace-4: 0.25rem; /* 4px */
 
   /* font weights */
 
-  --fw-400: 400;
-  --fw-600: 600;
-  --fw-700: 700;
+  --fweight-400: 400;
+  --fweight-600: 600;
+  --fweight-700: 700;
 
   /* line hight */
 
-  --lh: 150%;
+  --line-hight-base: 150%;
 }
 
 /* Typograpy  Weights: 400, 600, 700*/
 
-.text-24-bold {
-  font-size: var(--fs-24);
-  font-weight: var(--fw-600);
+.text-preset-1 {
+  font-size: var(--fsize-24);
+  font-weight: var(--fweight-700);
 }
-.text-14-bold {
-  font-size: var(--fs-14);
-  font-weight: var(--fw-600);
+.text-preset-2-bold {
+  font-size: var(--fsize-14);
+  font-weight: var(--fweight-700);
 }
 
-.text-14-regular {
-  font-size: var(--fs-14);
-  font-weight: var(--fw-400);
+.text-preset-2 {
+  font-size: var(--fsize-14);
+  font-weight: var(--fweight-400);
 }
 
 body {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  line-height: var(--lh);
+  line-height: var(--line-hight-base);
   background: var(--bg-grey-900);
   color: var(--bg-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.card-profile {
+  background-color: var(--bg-grey-800);
+  max-width: 24rem; /* 384px */
+  padding: var(--fspace-24);
+  text-align: center;
+  border-radius: var(--fspace-12);
+}
+
+img {
+  width: 5.5rem; /*88px*/
+  height: 5.5rem; /*88px*/
+  border-radius: 50%;
+}
+
+.profile-details {
+  margin-top: var(--fspace-24);
+  margin-bottom: var(--fspace-24);
+}
+.user-address {
+  color: var(--bg-green);
+}
+.user-about {
+  margin-top: var(--fspace-24);
+}
+li {
+  background-color: var(--bg-grey-700);
+  padding: var(--fspace-12);
+  border-radius: var(--fspace-8);
+  margin-bottom: var(--fspace-8);
+}
+li:last-child {
+  margin-bottom: 0;
 }
