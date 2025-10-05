@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: var(--fs-16); /* 16px = 1rem*/
+  font-size: var(--fsize-16); /* 16px = 1rem*/
 }
 li {
   list-style-type: none;
@@ -28,7 +28,7 @@ a {
   /* font sizes & font space */
 
   --fsize-24: 1.5rem; /* 24px */
-  --fszie-16: 1rem; /* 16px */
+  --fsize-16: 1rem; /* 16px */
   --fsize-14: 0.875rem; /* 14px */
 
   --fspace-40: 2.5rem; /* 40px */
@@ -90,6 +90,18 @@ body {
   border-radius: var(--fspace-12);
 }
 
+@media (min-width: 48rem) {
+  .card-profile {
+    padding: var(--fspace-40);
+  }
+}
+/* I don't need this part of code , because media table & desktop do the same role */
+/* @media (min-width: 64rem) {
+  .card-profile {
+    padding: var(--fspace-40);
+  }
+} */
+
 img {
   width: 5.5rem; /*88px*/
   height: 5.5rem; /*88px*/
@@ -114,4 +126,8 @@ li {
 }
 li:last-child {
   margin-bottom: 0;
+}
+li:hover {
+  background-color: var(--bg-green);
+  color: var(--bg-grey-700);
 }
